@@ -1,0 +1,12 @@
+.container {
+    border: solid 2px grey;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.dance-square {
+    border: solid 2px yellow;
+    height: 50vh;
+    width: 50vw;
+}
