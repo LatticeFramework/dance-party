@@ -13,9 +13,32 @@ console.log("Hello Jim");
 
 // setInterval(divChange, 2000);
 
-function changeStyle() {
-    const squares = document.getElementById("square-one");
-    squares.style.backgroundColor = "#00FF00";
+const x = 0;
+const colors = ["red", "green", "blue", "purple"]
+
+const squareOne = document.getElementById("square-one");
+const squareThree = document.getElementsByClassName("dance-square")[2];
+const squaresTwo = document.querySelectorAll(".dance-square")[1];
+
+function chanceColor() {
+    var letters = '0123456789ABCDEF'
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    console.log(color);
+    return color;
 }
 
-changeStyle();
+
+
+function changeStyle() {
+
+    squareOne.style.backgroundColor = chanceColor();
+    squaresTwo.style.backgroundColor = chanceColor();
+    squareThree.style.backgroundColor = chanceColor();
+}
+
+// setInterval(changeStyle, 1000);
+
+
